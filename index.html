@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irfan — Senior Video Editor & Motion Designer</title>
+  <meta name="description" content="High-impact video editing, motion graphics, and narrative storytelling for top YouTubers, venture-backed startups, visionary brands, and elite creators.">
+  <meta name="keywords" content="Video Editor, Motion Graphics, YouTube Editor, Short Form Video, SaaS Video, Color Grading, Sound Design, Irfan Video Editor">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Irfan — Senior Video Editor & Motion Designer">
+  <meta property="og:description" content="I Turn Raw Footage Into Content People Can't Stop Watching. 50M+ Views Generated.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="posters/hero-poster.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Film Noise / Grain Texture Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Mouse Spotlight Glow -->
+  <div class="mouse-glow" aria-hidden="true"></div>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="navbar" id="mainNavbar">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Irfan Portfolio Home">
+        <div class="brand-mark">
+          <span>I</span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">IRFAN</span>
+          <span class="brand-status">
+            <span class="status-dot"></span> AVAILABLE FOR WORK
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#featured-showreel" class="nav-link">Showreel</a></li>
+          <li><a href="#short-form" class="nav-link">Short Form</a></li>
+          <li><a href="#long-form" class="nav-link">Long Form</a></li>
+          <li><a href="#results" class="nav-link">Results</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Audio Feedback Toggle Button -->
+        <button class="audio-toggle-btn" id="audioToggleBtn" title="Sound Effects: OFF" aria-label="Toggle UI Audio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <!-- Primary CTA Button -->
+        <a href="#contact" class="btn btn-primary magnetic-btn">
+          <span>Hire Me</span>
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sheet -->
+  <div class="mobile-nav-sheet" id="mobileNavSheet" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <div class="brand-mark"><span>I</span></div>
+        <span class="brand-name">IRFAN</span>
+      </div>
+      <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close Mobile Menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#featured-showreel" class="mobile-nav-link">Showreel</a></li>
+      <li><a href="#short-form" class="mobile-nav-link">Short Form</a></li>
+      <li><a href="#long-form" class="mobile-nav-link">Long Form</a></li>
+      <li><a href="#results" class="mobile-nav-link">Results</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Hire Irfan</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         SECTION 1 — HERO
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Interactive Particle Canvas -->
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <!-- Left Content -->
+        <div class="hero-content reveal-fade-up">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            Senior Video Editor & Motion Designer
+          </div>
+          
+          <h1 class="hero-headline">
+            I Turn Raw Footage Into Content People <span class="text-gradient">Can't Stop Watching.</span>
+          </h1>
+
+          <p class="hero-subheadline">
+            Short-form edits, YouTube videos, commercials, motion graphics, and storytelling that drive attention and results.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary magnetic-btn">
+              <span>Book a Call</span>
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="#featured-showreel" class="btn btn-secondary magnetic-btn">
+              <span>View Portfolio</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Stats Beneath Headline -->
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <span class="stat-value" data-counter-target="150" data-counter-suffix="+">150+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="stat-value" data-counter-target="50" data-counter-suffix="M+">50M+</span>
+              <span class="stat-label">Views Generated</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="stat-value" data-counter-target="4" data-counter-suffix="+">4+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Floating Showreel Player -->
+        <div class="hero-player-wrapper reveal-fade-up delay-2">
+          <div class="hero-player-frame">
+            <video 
+              class="hero-video" 
+              id="heroVideo" 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              preload="metadata"
+              poster="posters/hero-poster.jpg">
+              <source src="videos/hero-section.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Top Overlays -->
+            <div class="player-overlay-top">
+              <div class="player-live-badge">
+                <span class="player-live-dot"></span>
+                <span>SHOWREEL LOOP</span>
+              </div>
+              <div class="player-fps-badge">4K · 60 FPS</div>
+            </div>
+
+            <!-- Bottom Overlays -->
+            <div class="player-overlay-bottom">
+              <button class="player-sound-pill" id="heroSoundPill" aria-label="Toggle Hero Video Sound">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <line x1="23" y1="9" x2="17" y2="15"></line>
+                  <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+                <span>Unmute Sound</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Floating Decorative Badge -->
+          <div class="hero-floating-card">
+            <div class="floating-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="floating-text-primary">Retention Specialist</div>
+              <div class="floating-text-secondary">Hook-to-End Watch Time &gt; 80%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2 — TRUST BAR (INFINITE LOGO MARQUEE)
+         ========================================================================== -->
+    <section class="trust-section" aria-label="Trusted by Creators & Brands">
+      <div class="container">
+        <div class="trust-label">TRUSTED BY LEADING CREATORS, STARTUPS &amp; BRANDS WORLDWIDE</div>
+      </div>
+
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Item: Nike -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M21.71 4.54c-.21-.08-.45-.04-.62.1L4.85 17.89c-1.48 1.25-3.32.22-3.35.2l-.5-.28 3.06-7.51c.07-.17.06-.37-.03-.53-.09-.16-.25-.26-.43-.27L1 9.4c-.45-.03-.86.29-.93.74-.08.45.21.88.66.97l1.78.36-2.5 6.13c-.22.54-.1 1.17.31 1.58.41.41 1.04.53 1.58.31l.24-.1c.64-.28 3.48-1.57 5.75-3.5L21.45 5.3c.18-.15.28-.38.26-.61s-.16-.43-.35-.51z"/></svg>
+            <span class="client-logo-name">NIKE</span>
+          </div>
+
+          <!-- Item: Adobe -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M13.96 22H24V2L13.96 22zM0 2v20h10.04L0 2zm9.46 12.83L12 7.73l2.54 7.1h-5.08z"/></svg>
+            <span class="client-logo-name">ADOBE</span>
+          </div>
+
+          <!-- Item: Shopify -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M15.42 2.6c-.15 0-.31.05-.44.15L12 4.96 9.02 2.75c-.13-.1-.29-.15-.44-.15-.45 0-.82.37-.82.82v17.16c0 .45.37.82.82.82.15 0 .31-.05.44-.15L12 19.04l2.98 2.21c.13.1.29.15.44.15.45 0 .82-.37.82-.82V3.42c0-.45-.37-.82-.82-.82z"/></svg>
+            <span class="client-logo-name">SHOPIFY</span>
+          </div>
+
+          <!-- Item: Notion -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.093-.373L17.75 1.55c-.56-.42-1.354-.84-2.66-.746L2.919 1.737c-.56.047-.699.42-.466.793zm.56 3.824v13.52c0 .84.42 1.167 1.353 1.12l14.615-.84c.933-.047 1.12-.56 1.12-1.26V6.914c0-.746-.28-.98-.933-.933l-15.08.887c-.7.047-1.075.42-1.075 1.164zm13.122 1.307c.093.42 0 .84-.42.887l-.746.14v8.583c-.466.28-.98.42-1.447.42-.793 0-1.12-.28-1.773-1.073l-4.71-6.903v6.716l1.4.326c.42.093.42.514.373.84l-3.36.186c-.093-.327 0-.746.373-.84l.98-.233V9.894l-1.353-.14c-.42-.047-.466-.466-.42-.84l3.547-.233 5.084 7.37V9.754l-1.307-.187c-.42-.047-.466-.467-.42-.84z"/></svg>
+            <span class="client-logo-name">NOTION</span>
+          </div>
+
+          <!-- Item: OpenAI -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M22.28 9.9c-.23-.84-.68-1.61-1.3-2.22-.38-.37-.82-.67-1.3-.89-.04-.55-.19-1.09-.46-1.58-.39-.71-.97-1.3-1.68-1.68-.7-.38-1.5-.56-2.3-.51-.31-.4-.7-.73-1.15-.97-.68-.37-1.44-.55-2.22-.55-.78 0-1.54.18-2.22.55-.45.24-.84.57-1.15.97-.8-.05-1.6.13-2.3.51-.71.38-1.29.97-1.68 1.68-.27.49-.42 1.03-.46 1.58-.48.22-.92.52-1.3.89-.62.61-1.07 1.38-1.3 2.22-.24.86-.24 1.77 0 2.63.1.37.26.72.46 1.05-.2.33-.36.68-.46 1.05-.24.86-.24 1.77 0 2.63.23.84.68 1.61 1.3 2.22.38.37.82.67 1.3.89.04.55.19 1.09.46 1.58.39.71.97 1.3 1.68 1.68.7.38 1.5.56 2.3.51.31.4.7.73 1.15.97.68.37 1.44.55 2.22.55.78 0 1.54-.18 2.22-.55.45-.24.84-.57 1.15-.97.8.05 1.6-.13 2.3-.51.71-.38 1.29-.97 1.68-1.68.27-.49.42-1.03.46-1.58.48-.22.92-.52 1.3-.89.62-.61 1.07-1.38 1.3-2.22.24-.86.24-1.77 0-2.63-.1-.37-.26-.72-.46-1.05.2-.33.36-.68.46-1.05.24-.86.24-1.77 0-2.63zm-9.3 10.95c-.86 0-1.7-.24-2.43-.7l1.08-1.87 2.45 1.41c-.36.72-.74 1.16-1.1 1.16zm-5.74-3.32c-.52-.69-.83-1.52-.9-2.39l2.16-.04.48 2.8c-.8.15-1.32-.03-1.74-.37zm-1.55-6.52c.16-.84.56-1.6 1.17-2.2l1.63 1.42-1.45 2.42c-.65-.49-1.08-1.05-1.35-1.64zm6.19-5.06c.86 0 1.7.24 2.43.7l-1.08 1.87-2.45-1.41c.36-.72.74-1.16 1.1-1.16zm5.74 3.32c.52.69.83 1.52.9 2.39l-2.16.04-.48-2.8c.8-.15 1.32.03 1.74.37zm1.55 6.52c-.16.84-.56 1.6-1.17 2.2l-1.63-1.42 1.45-2.42c.65.49 1.08 1.05 1.35 1.64z"/></svg>
+            <span class="client-logo-name">OPENAI</span>
+          </div>
+
+          <!-- Item: HubSpot -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M18.16 7.42V4.54A2.54 2.54 0 0 0 16.5 2a2.54 2.54 0 0 0-2.54 2.54v2.88a5.55 5.55 0 0 0-3.38 2.49l-4.54-3.53a2.02 2.02 0 1 0-1.53 1.95l4.38 3.41a5.54 5.54 0 0 0 .54 5.75l-2.73 2.73a1.86 1.86 0 1 0 1.32 1.32l2.74-2.74a5.55 5.55 0 1 0 7.36-8.98zm-2.7 6.64a2.94 2.94 0 1 1 0-4.15 2.94 2.94 0 0 1 0 4.15z"/></svg>
+            <span class="client-logo-name">HUBSPOT</span>
+          </div>
+
+          <!-- Item: Canva -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5c-2.49 0-4.5-2.01-4.5-4.5S8.51 7.5 11 7.5c1.43 0 2.71.67 3.54 1.71l-1.42 1.42C12.63 10.24 11.87 10 11 10c-1.1 0-2 .9-2 2s.9 2 2 2c.87 0 1.63-.24 2.12-.63l1.42 1.42C13.71 15.83 12.43 16.5 11 16.5z"/></svg>
+            <span class="client-logo-name">CANVA</span>
+          </div>
+
+          <!-- Item: Tesla -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M12 4.96c3.27 0 6.6.76 9.42 2.23l.58-2.61C18.66 3.19 15.34 2.5 12 2.5S5.34 3.19 2 4.58l.58 2.61C5.4 5.72 8.73 4.96 12 4.96zm9.89 4.31c-.13-.03-.27.02-.34.13l-4.14 7.17-2.45-6.72c-.05-.14-.19-.24-.34-.24H9.38c-.15 0-.29.1-.34.24L6.59 16.57 2.45 9.4c-.07-.11-.21-.16-.34-.13l-1.07.28c-.14.04-.22.18-.18.32l5.12 11.13c.05.12.18.2.31.2h2.24c.14 0 .26-.08.31-.2L12 13.74l3.12 7.26c.05.12.17.2.31.2h2.24c.13 0 .26-.08.31-.2l5.12-11.13c.04-.14-.04-.28-.18-.32l-1.03-.28z"/></svg>
+            <span class="client-logo-name">TESLA</span>
+          </div>
+
+          <!-- Duplicated for seamless loop -->
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M21.71 4.54c-.21-.08-.45-.04-.62.1L4.85 17.89c-1.48 1.25-3.32.22-3.35.2l-.5-.28 3.06-7.51c.07-.17.06-.37-.03-.53-.09-.16-.25-.26-.43-.27L1 9.4c-.45-.03-.86.29-.93.74-.08.45.21.88.66.97l1.78.36-2.5 6.13c-.22.54-.1 1.17.31 1.58.41.41 1.04.53 1.58.31l.24-.1c.64-.28 3.48-1.57 5.75-3.5L21.45 5.3c.18-.15.28-.38.26-.61s-.16-.43-.35-.51z"/></svg>
+            <span class="client-logo-name">NIKE</span>
+          </div>
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M13.96 22H24V2L13.96 22zM0 2v20h10.04L0 2zm9.46 12.83L12 7.73l2.54 7.1h-5.08z"/></svg>
+            <span class="client-logo-name">ADOBE</span>
+          </div>
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M15.42 2.6c-.15 0-.31.05-.44.15L12 4.96 9.02 2.75c-.13-.1-.29-.15-.44-.15-.45 0-.82.37-.82.82v17.16c0 .45.37.82.82.82.15 0 .31-.05.44-.15L12 19.04l2.98 2.21c.13.1.29.15.44.15.45 0 .82-.37.82-.82V3.42c0-.45-.37-.82-.82-.82z"/></svg>
+            <span class="client-logo-name">SHOPIFY</span>
+          </div>
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.093-.373L17.75 1.55c-.56-.42-1.354-.84-2.66-.746L2.919 1.737c-.56.047-.699.42-.466.793zm.56 3.824v13.52c0 .84.42 1.167 1.353 1.12l14.615-.84c.933-.047 1.12-.56 1.12-1.26V6.914c0-.746-.28-.98-.933-.933l-15.08.887c-.7.047-1.075.42-1.075 1.164zm13.122 1.307c.093.42 0 .84-.42.887l-.746.14v8.583c-.466.28-.98.42-1.447.42-.793 0-1.12-.28-1.773-1.073l-4.71-6.903v6.716l1.4.326c.42.093.42.514.373.84l-3.36.186c-.093-.327 0-.746.373-.84l.98-.233V9.894l-1.353-.14c-.42-.047-.466-.466-.42-.84l3.547-.233 5.084 7.37V9.754l-1.307-.187c-.42-.047-.466-.467-.42-.84z"/></svg>
+            <span class="client-logo-name">NOTION</span>
+          </div>
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M22.28 9.9c-.23-.84-.68-1.61-1.3-2.22-.38-.37-.82-.67-1.3-.89-.04-.55-.19-1.09-.46-1.58-.39-.71-.97-1.3-1.68-1.68-.7-.38-1.5-.56-2.3-.51-.31-.4-.7-.73-1.15-.97-.68-.37-1.44-.55-2.22-.55-.78 0-1.54.18-2.22.55-.45.24-.84.57-1.15.97-.8-.05-1.6.13-2.3.51-.71.38-1.29.97-1.68 1.68-.27.49-.42 1.03-.46 1.58-.48.22-.92.52-1.3.89-.62.61-1.07 1.38-1.3 2.22-.24.86-.24 1.77 0 2.63.1.37.26.72.46 1.05-.2.33-.36.68-.46 1.05-.24.86-.24 1.77 0 2.63.23.84.68 1.61 1.3 2.22.38.37.82.67 1.3.89.04.55.19 1.09.46 1.58.39.71.97 1.3 1.68 1.68.7.38 1.5.56 2.3.51.31.4.7.73 1.15.97.68.37 1.44.55 2.22.55.78 0 1.54-.18 2.22-.55.45-.24.84-.57 1.15-.97.8.05 1.6-.13 2.3-.51.71-.38 1.29-.97 1.68-1.68.27-.49.42-1.03.46-1.58.48-.22.92-.52 1.3-.89.62-.61 1.07-1.38 1.3-2.22.24-.86.24-1.77 0-2.63-.1-.37-.26-.72-.46-1.05.2-.33.36-.68.46-1.05.24-.86.24-1.77 0-2.63zm-9.3 10.95c-.86 0-1.7-.24-2.43-.7l1.08-1.87 2.45 1.41c-.36.72-.74 1.16-1.1 1.16zm-5.74-3.32c-.52-.69-.83-1.52-.9-2.39l2.16-.04.48 2.8c-.8.15-1.32-.03-1.74-.37zm-1.55-6.52c.16-.84.56-1.6 1.17-2.2l1.63 1.42-1.45 2.42c-.65-.49-1.08-1.05-1.35-1.64zm6.19-5.06c.86 0 1.7.24 2.43.7l-1.08 1.87-2.45-1.41c.36-.72.74-1.16 1.1-1.16zm5.74 3.32c.52.69.83 1.52.9 2.39l-2.16.04-.48-2.8c.8-.15 1.32.03 1.74.37zm1.55 6.52c-.16.84-.56 1.6-1.17 2.2l-1.63-1.42 1.45-2.42c.65.49 1.08 1.05 1.35 1.64z"/></svg>
+            <span class="client-logo-name">OPENAI</span>
+          </div>
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M18.16 7.42V4.54A2.54 2.54 0 0 0 16.5 2a2.54 2.54 0 0 0-2.54 2.54v2.88a5.55 5.55 0 0 0-3.38 2.49l-4.54-3.53a2.02 2.02 0 1 0-1.53 1.95l4.38 3.41a5.54 5.54 0 0 0 .54 5.75l-2.73 2.73a1.86 1.86 0 1 0 1.32 1.32l2.74-2.74a5.55 5.55 0 1 0 7.36-8.98zm-2.7 6.64a2.94 2.94 0 1 1 0-4.15 2.94 2.94 0 0 1 0 4.15z"/></svg>
+            <span class="client-logo-name">HUBSPOT</span>
+          </div>
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5c-2.49 0-4.5-2.01-4.5-4.5S8.51 7.5 11 7.5c1.43 0 2.71.67 3.54 1.71l-1.42 1.42C12.63 10.24 11.87 10 11 10c-1.1 0-2 .9-2 2s.9 2 2 2c.87 0 1.63-.24 2.12-.63l1.42 1.42C13.71 15.83 12.43 16.5 11 16.5z"/></svg>
+            <span class="client-logo-name">CANVA</span>
+          </div>
+          <div class="client-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M12 4.96c3.27 0 6.6.76 9.42 2.23l.58-2.61C18.66 3.19 15.34 2.5 12 2.5S5.34 3.19 2 4.58l.58 2.61C5.4 5.72 8.73 4.96 12 4.96zm9.89 4.31c-.13-.03-.27.02-.34.13l-4.14 7.17-2.45-6.72c-.05-.14-.19-.24-.34-.24H9.38c-.15 0-.29.1-.34.24L6.59 16.57 2.45 9.4c-.07-.11-.21-.16-.34-.13l-1.07.28c-.14.04-.22.18-.18.32l5.12 11.13c.05.12.18.2.31.2h2.24c.14 0 .26-.08.31-.2L12 13.74l3.12 7.26c.05.12.17.2.31.2h2.24c.13 0 .26-.08.31-.2l5.12-11.13c.04-.14-.04-.28-.18-.32l-1.03-.28z"/></svg>
+            <span class="client-logo-name">TESLA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3 — FEATURED SHOWREEL
+         ========================================================================== -->
+    <section class="section-wrapper showreel-section" id="featured-showreel">
+      <div class="container">
+        <div class="reveal-fade-up">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            Motion Design &amp; SaaS Storytelling
+          </div>
+          <h2 class="section-title">Featured Showreel</h2>
+          <p class="section-subtitle">
+            A high-energy showcase of motion graphics, UI animations, and precision editing crafted to turn viewers into converted users.
+          </p>
+        </div>
+
+        <!-- Embedded Showreel Container -->
+        <div class="showreel-container reveal-fade-up delay-2">
+          <div class="showreel-card" id="featuredShowreelCard" role="button" tabindex="0" aria-label="Play Featured Showreel in Fullscreen">
+            <!-- Video Media Preview -->
+            <video 
+              class="showreel-media" 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              preload="metadata"
+              poster="posters/chatgpt-saas.jpg">
+              <source src="videos/chatgpt-saas.mp4" type="video/mp4">
+            </video>
+
+            <!-- Dark Gradient & Text Overlay -->
+            <div class="showreel-overlay">
+              <div class="showreel-tags">
+                <span class="pill-tag">SaaS Explainer</span>
+                <span class="pill-tag">Kinetic UI</span>
+                <span class="pill-tag">Sound Design</span>
+              </div>
+
+              <!-- Center Big Pulsing Play Button -->
+              <div class="showreel-center-play">
+                <div class="play-circle">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <span class="play-label">Click to Play Lightbox</span>
+              </div>
+
+              <!-- Bottom Bar Info -->
+              <div class="showreel-bottom-info">
+                <div>
+                  <h3 class="showreel-title">ChatGPT SaaS Motion Direction</h3>
+                  <p class="longform-desc" style="margin-bottom: 0;">Interactive UI choreography, 3D layer depth, and retention audio mix.</p>
+                </div>
+                <span class="badge-duration">0:14 · 4K</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4 — SHORT FORM PORTFOLIO
+         ========================================================================== -->
+    <section class="section-wrapper shortform-section" id="short-form">
+      <div class="container">
+        <div class="portfolio-header reveal-fade-up">
+          <div>
+            <div class="section-badge">
+              <span class="badge-dot"></span>
+              Retention Engineered
+            </div>
+            <h2 class="section-title">Short Form Content</h2>
+            <p class="section-subtitle">
+              Videos optimized for retention and engagement. Designed for TikTok, YouTube Shorts, and Instagram Reels to capture instant viewer attention.
+            </p>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="#contact" class="btn btn-secondary magnetic-btn">
+              <span>Request Custom Reels</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3-Column Desktop / 1-Column Mobile Grid -->
+        <div class="shortform-grid">
+          
+          <!-- Card 1: Productivity Reel (Provided Video) -->
+          <div class="shortform-card reveal-fade-up" 
+               onclick="window.openVideoLightbox('videos/promoted-reel.mp4', 'Productivity Reel — Promoted Within 6 Months', 'Short Form &amp; Viral Retention', true)">
+            <div class="shortform-video-container">
+              <video 
+                class="shortform-video" 
+                muted 
+                loop 
+                playsinline 
+                preload="metadata"
+                poster="posters/promoted-reel.jpg">
+                <source src="videos/promoted-reel.mp4" type="video/mp4">
+              </video>
+
+              <div class="shortform-overlay-top">
+                <span class="shortform-badge">FLAGSHIP REEL</span>
+                <span class="shortform-duration">0:33</span>
+              </div>
+
+              <div class="shortform-play-hover">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+
+            <div class="shortform-details">
+              <h3 class="shortform-title">Productivity Reel</h3>
+              
+              <div class="shortform-metrics">
+                <div class="metric-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <span>1.2M+ Views</span>
+                </div>
+                <div class="metric-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                  <span>82% Retention</span>
+                </div>
+              </div>
+
+              <p class="longform-desc">
+                High-converting talking-head breakdown with animated kinetic subtitles, subtle visual zooms, and seamless retention hooks.
+              </p>
+
+              <div class="shortform-tags">
+                <span class="pill-tag">Kinetic Subtitles</span>
+                <span class="pill-tag">Fast Pacing</span>
+                <span class="pill-tag">Sound FX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: SaaS Retention Hook Case Study (Complementary Grid Anchor) -->
+          <div class="shortform-card reveal-fade-up delay-1"
+               onclick="window.openVideoLightbox('videos/chatgpt-saas.mp4', 'Viral SaaS Hook Breakdown', 'SaaS Growth &amp; Reels', false)">
+            <div class="shortform-video-container" style="display: flex; align-items: center; justify-content: center; background: #0c0c12;">
+              <video 
+                class="shortform-video" 
+                muted 
+                loop 
+                playsinline 
+                preload="metadata"
+                poster="posters/chatgpt-saas.jpg">
+                <source src="videos/chatgpt-saas.mp4" type="video/mp4">
+              </video>
+              <div class="shortform-overlay-top">
+                <span class="shortform-badge">VIRAL HOOK</span>
+                <span class="shortform-duration">0:14</span>
+              </div>
+              <div class="shortform-play-hover">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+
+            <div class="shortform-details">
+              <h3 class="shortform-title">SaaS Growth Hook</h3>
+              
+              <div class="shortform-metrics">
+                <div class="metric-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <span>950K+ Views</span>
+                </div>
+                <div class="metric-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  </svg>
+                  <span>4.2x Shares</span>
+                </div>
+              </div>
+
+              <p class="longform-desc">
+                High-intensity micro-animation highlighting product value in the first 3 seconds, proven to dramatically reduce drop-off.
+              </p>
+
+              <div class="shortform-tags">
+                <span class="pill-tag">Pattern Interrupt</span>
+                <span class="pill-tag">B2B SaaS</span>
+                <span class="pill-tag">Motion UI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Creator Personal Brand Reel (Complementary Grid Anchor) -->
+          <div class="shortform-card reveal-fade-up delay-2"
+               onclick="window.openVideoLightbox('videos/hero-section.mp4', 'Dynamic Typography Reel', 'Motion &amp; 3D Design', false)">
+            <div class="shortform-video-container" style="display: flex; align-items: center; justify-content: center; background: #0c0c12;">
+              <video 
+                class="shortform-video" 
+                muted 
+                loop 
+                playsinline 
+                preload="metadata"
+                poster="posters/hero-poster.jpg">
+                <source src="videos/hero-section.mp4" type="video/mp4">
+              </video>
+              <div class="shortform-overlay-top">
+                <span class="shortform-badge">BRAND INTRO</span>
+                <span class="shortform-duration">0:13</span>
+              </div>
+              <div class="shortform-play-hover">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+
+            <div class="shortform-details">
+              <h3 class="shortform-title">Dynamic Brand Showcase</h3>
+              
+              <div class="shortform-metrics">
+                <div class="metric-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <span>2.1M+ Views</span>
+                </div>
+                <div class="metric-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  </svg>
+                  <span>91% Watch Time</span>
+                </div>
+              </div>
+
+              <p class="longform-desc">
+                High-caliber 3D text tracking and synchronized bass impacts designed for luxury personal brands and agency launch reels.
+              </p>
+
+              <div class="shortform-tags">
+                <span class="pill-tag">3D Motion</span>
+                <span class="pill-tag">Luxury Brand</span>
+                <span class="pill-tag">Bass Foley</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5 — LONG FORM PORTFOLIO
+         ========================================================================== -->
+    <section class="section-wrapper longform-section" id="long-form">
+      <div class="container">
+        <div class="portfolio-header reveal-fade-up">
+          <div>
+            <div class="section-badge">
+              <span class="badge-dot"></span>
+              YouTube &amp; High-Retention Narrative
+            </div>
+            <h2 class="section-title">Long Form Content</h2>
+            <p class="section-subtitle">
+              Pacing, visual metaphors, narrative arcs, and audio design engineered to keep viewers glued through 10-40 minute deep dives.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5 YouTube-Style Project Cards -->
+        <div class="longform-grid">
+
+          <!-- 1. SaaS Animation Edit -->
+          <div class="longform-card reveal-fade-up" 
+               onclick="window.location.href='project.html?id=saas-animation'">
+            <div class="longform-thumb-wrapper">
+              <img class="longform-thumb-img" src="posters/chatgpt-saas.jpg" alt="SaaS Animation Edit Thumbnail">
+              <video class="longform-preview-video" muted loop playsinline preload="none">
+                <source src="videos/chatgpt-saas.mp4" type="video/mp4">
+              </video>
+              <span class="longform-category-pill">SaaS &amp; Tech</span>
+              <div class="longform-thumb-badges">
+                <span class="badge-duration">0:14</span>
+                <span class="badge-views">450K Views</span>
+              </div>
+            </div>
+            <div class="longform-info">
+              <h3 class="longform-title">SaaS Animation Edit</h3>
+              <p class="longform-desc">ChatGPT UI walkthrough featuring sleek viewport transitions, kinetic cursor tracking, and modular component highlights.</p>
+              <div class="longform-footer">
+                <span class="pill-tag">Motion Graphics</span>
+                <span class="view-project-link">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Before After Edit (Features Before / After Comparison) -->
+          <div class="longform-card reveal-fade-up delay-1" 
+               onclick="window.location.href='project.html?id=before-after'">
+            <div class="longform-thumb-wrapper">
+              <img class="longform-thumb-img" src="posters/before-after-tharun.jpg" alt="Before & After Edit Thumbnail">
+              <video class="longform-preview-video" muted loop playsinline preload="none">
+                <source src="videos/before-after-tharun.mp4" type="video/mp4">
+              </video>
+              <span class="longform-category-pill before-after-badge">⚡ Before / After Grade</span>
+              <div class="longform-thumb-badges">
+                <span class="badge-duration">0:27</span>
+                <span class="badge-views">820K Views</span>
+              </div>
+            </div>
+            <div class="longform-info">
+              <h3 class="longform-title">Before &amp; After Transformation</h3>
+              <p class="longform-desc">Dramatic side-by-side overhaul: skin-tone color grading, dynamic background compression, custom light leaks, and room tone cleanup.</p>
+              <div class="longform-footer">
+                <span class="pill-tag">Color Grade &amp; Audio Polish</span>
+                <span class="view-project-link">
+                  <span>View Breakdown</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Educational YouTube Video -->
+          <div class="longform-card reveal-fade-up delay-2" 
+               onclick="window.location.href='project.html?id=educational-youtube'">
+            <div class="longform-thumb-wrapper">
+              <img class="longform-thumb-img" src="posters/tharun-talking-head.jpg" alt="Educational YouTube Video Thumbnail">
+              <video class="longform-preview-video" muted loop playsinline preload="none">
+                <source src="videos/tharun-talking-head.mp4" type="video/mp4">
+              </video>
+              <span class="longform-category-pill">Educational YouTube</span>
+              <div class="longform-thumb-badges">
+                <span class="badge-duration">0:27</span>
+                <span class="badge-views">1.4M Views</span>
+              </div>
+            </div>
+            <div class="longform-info">
+              <h3 class="longform-title">Educational YouTube Video</h3>
+              <p class="longform-desc">Masterclass-level educational pacing: conceptual diagrams, pattern interrupts every 4.5 seconds, and immersive ambient risers.</p>
+              <div class="longform-footer">
+                <span class="pill-tag">Retention Storytelling</span>
+                <span class="view-project-link">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Talking Head Video -->
+          <div class="longform-card reveal-fade-up" 
+               onclick="window.location.href='project.html?id=talking-head'">
+            <div class="longform-thumb-wrapper">
+              <img class="longform-thumb-img" src="posters/assignment-3.jpg" alt="Talking Head Video Thumbnail">
+              <video class="longform-preview-video" muted loop playsinline preload="none">
+                <source src="videos/assignment-3.mp4" type="video/mp4">
+              </video>
+              <span class="longform-category-pill">Executive Brand</span>
+              <div class="longform-thumb-badges">
+                <span class="badge-duration">0:56</span>
+                <span class="badge-views">680K Views</span>
+              </div>
+            </div>
+            <div class="longform-info">
+              <h3 class="longform-title">Talking Head Video Production</h3>
+              <p class="longform-desc">Founder thought-leadership edit with multi-angle simulated cut-ins, crisp dialogue de-reverberation, and clean b-roll transitions.</p>
+              <div class="longform-footer">
+                <span class="pill-tag">Audio Mastering &amp; B-Roll</span>
+                <span class="view-project-link">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Motion Graphics Video -->
+          <div class="longform-card reveal-fade-up delay-1" 
+               onclick="window.location.href='project.html?id=motion-graphics'">
+            <div class="longform-thumb-wrapper">
+              <img class="longform-thumb-img" src="posters/hero-poster.jpg" alt="Motion Graphics Video Thumbnail">
+              <video class="longform-preview-video" muted loop playsinline preload="none">
+                <source src="videos/hero-section.mp4" type="video/mp4">
+              </video>
+              <span class="longform-category-pill">Motion Graphics</span>
+              <div class="longform-thumb-badges">
+                <span class="badge-duration">0:13</span>
+                <span class="badge-views">2.1M Views</span>
+              </div>
+            </div>
+            <div class="longform-info">
+              <h3 class="longform-title">Motion Graphics &amp; 3D Typography</h3>
+              <p class="longform-desc">High-octane commercial titles, custom optical flares, 3D camera sweeps, and bass-heavy sound design tailored for launch campaigns.</p>
+              <div class="longform-footer">
+                <span class="pill-tag">After Effects &amp; 3D</span>
+                <span class="view-project-link">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6 — RESULTS THAT MATTER
+         ========================================================================== -->
+    <section class="section-wrapper results-section" id="results">
+      <div class="container">
+        <div class="reveal-fade-up" style="text-align: center; max-width: 680px; margin: 0 auto 4rem;">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            Proven Performance
+          </div>
+          <h2 class="section-title">Results That Matter</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Editing is not just art; it's audience psychology. Here is the concrete impact delivered for channels and clients.
+          </p>
+        </div>
+
+        <div class="results-grid">
+          <!-- Metric 1 -->
+          <div class="result-card reveal-fade-up">
+            <div class="result-number" data-counter-target="50" data-counter-suffix="M+">50M+</div>
+            <div class="result-label">Total Views Generated</div>
+            <div class="result-detail">Across YouTube, Instagram, and TikTok for clients ranging from indie creators to enterprise brands.</div>
+          </div>
+
+          <!-- Metric 2 -->
+          <div class="result-card reveal-fade-up delay-1">
+            <div class="result-number" data-counter-target="150" data-counter-suffix="+">150+</div>
+            <div class="result-label">Projects Completed</div>
+            <div class="result-detail">Delivered with a 100% on-time milestone track record and zero missed production deadlines.</div>
+          </div>
+
+          <!-- Metric 3 -->
+          <div class="result-card reveal-fade-up delay-2">
+            <div class="result-number" data-counter-target="98" data-counter-suffix="%">98%</div>
+            <div class="result-label">Client Satisfaction</div>
+            <div class="result-detail">Consistently rated 5 stars for communication speed, editorial instincts, and creative vision.</div>
+          </div>
+
+          <!-- Metric 4 -->
+          <div class="result-card reveal-fade-up delay-3">
+            <div class="result-number" data-counter-target="4" data-counter-suffix="+">4+</div>
+            <div class="result-label">Years Experience</div>
+            <div class="result-detail">Deep mastery of Adobe Premiere Pro, After Effects, DaVinci Resolve, and modern retention tactics.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7 — SERVICES (WHAT I CAN HELP YOU WITH)
+         ========================================================================== -->
+    <section class="section-wrapper services-section" id="services">
+      <div class="container">
+        <div class="reveal-fade-up" style="text-align: center; max-width: 680px; margin: 0 auto 4rem;">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            Core Capabilities
+          </div>
+          <h2 class="section-title">What I Can Help You With</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Comprehensive post-production solutions built to turn casual scrollers into loyal subscribers and customers.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Short Form Editing -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Short Form Editing</h3>
+            <p class="service-desc">Hyper-engaging TikToks, Reels, and Shorts featuring animated captions, whip zooms, sound cues, and retention hooks.</p>
+            <ul class="service-deliverables">
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>3-Second Hook Optimization</span>
+              </li>
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Custom Kinetic Typography</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2. YouTube Editing -->
+          <div class="service-card reveal-fade-up delay-1">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </div>
+            <h3 class="service-title">YouTube Editing</h3>
+            <p class="service-desc">Long-form pacing that boosts Average View Duration (AVD). Narrative structure, chapters, and strategic visual cutaways.</p>
+            <ul class="service-deliverables">
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Strategic Pattern Interrupts</span>
+              </li>
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Seamless B-Roll Integration</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3. Motion Graphics -->
+          <div class="service-card reveal-fade-up delay-2">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title">Motion Graphics</h3>
+            <p class="service-desc">2D and 3D kinetic typography, animated title sequences, lower thirds, HUD overlays, and complex SaaS feature demonstrations.</p>
+            <ul class="service-deliverables">
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>After Effects Custom Renders</span>
+              </li>
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Modern Glassmorphism &amp; HUDs</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 4. Color Grading -->
+          <div class="service-card reveal-fade-up delay-3">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a10 10 0 0 0 0 20z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Color Grading</h3>
+            <p class="service-desc">Hollywood-grade color grading in DaVinci Resolve. Film emulation, precise skin-tone balancing, contrast grading, and atmosphere design.</p>
+            <ul class="service-deliverables">
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Natural Skin Tone Isolation</span>
+              </li>
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Cinematic Look Consistency</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 5. Sound Design -->
+          <div class="service-card reveal-fade-up">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18V5l12-2v13"></path>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="16" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title">Sound Design</h3>
+            <p class="service-desc">Multi-layered Foley sound effects, sub-bass drops, risers, whooshes, ambient room fills, and pristine vocal de-noising.</p>
+            <ul class="service-deliverables">
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Multi-Track Foley Audio Mix</span>
+              </li>
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Podcast-Grade Voice Mastering</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 6. Thumbnail Design -->
+          <div class="service-card reveal-fade-up delay-1">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title">Thumbnail Design</h3>
+            <p class="service-desc">Eye-stopping 10%+ CTR thumbnails engineered with psychological contrast, high-expression cutouts, and readable focal points.</p>
+            <ul class="service-deliverables">
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>A/B Tested Visual Concepts</span>
+              </li>
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>High-CTR Typography Styling</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 7. Content Repurposing -->
+          <div class="service-card reveal-fade-up delay-2">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="17 1 21 5 17 9"></polyline>
+                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                <polyline points="7 23 3 19 7 15"></polyline>
+                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Content Repurposing</h3>
+            <p class="service-desc">Transforming 1 long podcast episode, keynote, or webinar into 15+ high-performing vertical shorts and engaging social clips.</p>
+            <ul class="service-deliverables">
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Viral Goldmine Moment Selection</span>
+              </li>
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Multi-Platform Aspect Adaptations</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 8. Personal Branding Videos -->
+          <div class="service-card reveal-fade-up delay-3">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title">Personal Branding Videos</h3>
+            <p class="service-desc">Bespoke editing for founders, venture capitalists, authors, and industry thought leaders looking to establish undisputed authority.</p>
+            <ul class="service-deliverables">
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Executive Dark Luxury Aesthetic</span>
+              </li>
+              <li class="service-deliv-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Tailored Retainer Support</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8 — FAQ (ACCORDION)
+         ========================================================================== -->
+    <section class="section-wrapper faq-section" id="faq">
+      <div class="container">
+        <div class="reveal-fade-up" style="text-align: center; max-width: 680px; margin: 0 auto 3rem;">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            Clear Process
+          </div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Everything you need to know about working together, turnaround timelines, revisions, and project execution.
+          </p>
+        </div>
+
+        <div class="faq-wrapper reveal-fade-up delay-1">
+          <!-- Q1 -->
+          <div class="faq-item active">
+            <button class="faq-question" aria-expanded="true">
+              <span class="faq-question-text">How long does a project take?</span>
+              <span class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer" style="max-height: 200px;">
+              <div class="faq-answer-inner">
+                Short-form videos (Reels, TikToks, Shorts) are typically delivered within 24 to 48 hours. Long-form YouTube videos and commercial edits generally take between 3 to 5 business days, depending on narrative length, motion graphics density, and raw footage volume. Rush turnarounds are available upon request.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-question-text">How many revisions are included?</span>
+              <span class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Every project includes unlimited minor polish revisions within the agreed project scope (e.g. text tweaks, audio balance, trim adjustments) plus 2 rounds of major structural revisions using time-coded Frame.io or Notion review links. The objective is 100% satisfaction before final export.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-question-text">Do you edit short-form content?</span>
+              <span class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, absolutely. Short-form retention editing is one of my highest-demand specializations. I handle everything from hook drafting, dynamic animation, and custom kinetic subtitles to sound design and color grading formatted specifically for 9:16 mobile screens.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-question-text">Can you create motion graphics?</span>
+              <span class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes! From 2D kinetic typography and lower thirds to 3D title sequences, SaaS app walkthrough choreography, optical HUDs, and animated data visualizations in Adobe After Effects. All motion graphics are tailored to match your exact brand guidelines and visual palette.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-question-text">What are your pricing models?</span>
+              <span class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                I work on both a fixed per-project basis for one-off deliverables and a monthly retainer model for high-volume creators and fast-moving brands. Retainers provide priority queue turnaround, dedicated production bandwidth, and discounted batch pricing. Fill out the contact form below to receive a personalized quote.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9 — CONTACT
+         ========================================================================== -->
+    <section class="section-wrapper contact-section" id="contact">
+      <div class="contact-ambient-glow" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left Column: Irfan's Info & Booking Card -->
+          <div class="contact-info-col reveal-fade-up">
+            <div class="section-badge">
+              <span class="badge-dot"></span>
+              Direct Inquiries
+            </div>
+            
+            <h2 class="section-title">Let's Build Something Great</h2>
+            <p class="section-subtitle">
+              Ready to level up your content? Whether you need a killer showreel, viral short-form retention, or an ongoing YouTube editing partner, let's talk.
+            </p>
+
+            <!-- Irfan Contact Profile Card -->
+            <div class="contact-card">
+              <div class="contact-profile">
+                <div class="contact-avatar">IA</div>
+                <div>
+                  <div class="contact-profile-name">Irfan Ahmed B</div>
+                  <div class="contact-profile-role">Senior Video Editor &amp; Motion Designer</div>
+                </div>
+              </div>
+
+              <!-- Direct Email with 1-click Copy -->
+              <div class="contact-detail-row">
+                <div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono);">Direct Email</div>
+                  <div class="detail-email-val">Irfan.initials1@gmail.com</div>
+                </div>
+                <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy Email to Clipboard">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Key Guarantees -->
+              <div class="contact-highlights">
+                <div class="highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Average response time: &lt; 12 Hours</span>
+                </div>
+                <div class="highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Currently booking: 2 Retainer Slots Remaining for this month</span>
+                </div>
+                <div class="highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Production suite: Premiere Pro, After Effects, DaVinci Resolve Studio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Conversion Contact Form -->
+          <div class="contact-form-container reveal-fade-up delay-1">
+            <form class="contact-form" id="projectContactForm">
+              <!-- Name -->
+              <div class="form-group">
+                <label class="form-label" for="clientName">
+                  Your Name <span>*</span>
+                </label>
+                <input class="form-input" type="text" id="clientName" name="name" placeholder="e.g. Alex Morgan" required>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="form-label" for="clientEmail">
+                  Your Work Email <span>*</span>
+                </label>
+                <input class="form-input" type="email" id="clientEmail" name="email" placeholder="alex@company.com or creator@domain.com" required>
+              </div>
+
+              <!-- Project Type -->
+              <div class="form-group">
+                <label class="form-label" for="projectType">
+                  Project Type
+                </label>
+                <select class="form-select" id="projectType" name="project_type">
+                  <option value="Short Form Content (Reels / Shorts / TikTok)">Short Form Content (Reels / Shorts / TikTok)</option>
+                  <option value="YouTube Long Form Video">YouTube Long Form Video</option>
+                  <option value="Motion Graphics & SaaS Commercial">Motion Graphics &amp; SaaS Commercial</option>
+                  <option value="Monthly Retainer (Full Production Bandwidth)">Monthly Retainer (Full Production Bandwidth)</option>
+                  <option value="Color Grading & Sound Design Polish">Color Grading &amp; Sound Design Polish</option>
+                </select>
+              </div>
+
+              <!-- Budget Range Selection -->
+              <div class="form-group">
+                <label class="form-label">
+                  Estimated Budget
+                </label>
+                <input type="hidden" id="selectedBudget" name="budget" value="$50 - $150">
+                <div class="budget-pills">
+                  <div class="budget-pill active" data-budget="$50 - $150">$50 – $150</div>
+                  <div class="budget-pill" data-budget="$150 - $400">$150 – $400</div>
+                  <div class="budget-pill" data-budget="$400+">$400+</div>
+                </div>
+              </div>
+
+              <!-- Message / Details -->
+              <div class="form-group">
+                <label class="form-label" for="projectDetails">
+                  Project Details or Footage Link
+                </label>
+                <textarea class="form-textarea" id="projectDetails" name="message" placeholder="Tell me about your channel or brand, timeline, and link to raw footage (Google Drive, Dropbox, Frame.io)..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary magnetic-btn" id="contactSubmitBtn" style="width: 100%; padding: 1.1rem; font-size: 1.05rem;">
+                <span id="submitBtnText">Start Your Project</span>
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </form>
+
+            <!-- Success Animation Overlay -->
+            <div class="contact-success-overlay" id="contactSuccessOverlay">
+              <div class="success-icon-circle">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="success-title">Inquiry Sent to Irfan!</h3>
+              <p class="success-desc" id="successDesc">
+                Thank you for reaching out. A notification with your project details has been sent to <strong>Irfan.initials1@gmail.com</strong>. Irfan will personally review your requirements and respond within 12 hours.
+              </p>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <button class="btn btn-secondary" id="successCloseBtn">Send Another Inquiry</button>
+                <a href="#" class="btn btn-primary" id="successMailtoBtn" style="display: none; padding: 0.85rem 1.25rem;">
+                  <span>Open in Email App</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 10 — FOOTER
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="footer-ambient" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <div class="brand-mark"><span>I</span></div>
+            <div class="brand-info">
+              <span class="brand-name">IRFAN</span>
+              <span class="brand-status">
+                <span class="status-dot"></span> SENIOR VIDEO EDITOR
+              </span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Transforming raw video into hypnotic storytelling that drives retention, brand authority, and revenue.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#featured-showreel" class="footer-link">Featured Showreel</a></li>
+            <li><a href="#short-form" class="footer-link">Short Form Content</a></li>
+            <li><a href="#long-form" class="footer-link">Long Form Portfolio</a></li>
+            <li><a href="#results" class="footer-link">Results &amp; Impact</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+            <li><a href="#contact" class="footer-link">Contact &amp; Bookings</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Links (With Rich Instagram Placeholder Card) -->
+        <div>
+          <h4 class="footer-col-title">Connect</h4>
+          <div class="social-links-grid">
+            <!-- Instagram Card (Specific requirement) -->
+            <a href="https://www.instagram.com/thesimpleedit.0?jplx=MTJyZTh5dG5keHpiMg==" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Follow Irfan on Instagram">
+              <div class="social-left">
+                <div class="social-icon-circle">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div class="social-name">Instagram</div>
+                  <div class="social-handle">@thesimpleedit.0</div>
+                </div>
+              </div>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <!-- YouTube Placeholder -->
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Irfan on YouTube">
+              <div class="social-left">
+                <div class="social-icon-circle">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                  </svg>
+                </div>
+                <div>
+                  <div class="social-name">YouTube Channel</div>
+                  <div class="social-handle">High-Retention Edits</div>
+                </div>
+              </div>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <!-- X / Twitter -->
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Irfan on X Twitter">
+              <div class="social-left">
+                <div class="social-icon-circle">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="social-name">X (Twitter)</div>
+                  <div class="social-handle">@irfan_edits</div>
+                </div>
+              </div>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Irfan Ahmed B. All Rights Reserved. Engineered for 60fps viewer conversion.
+        </div>
+        <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FULLSCREEN LIGHTBOX MODAL & SLEEK VIDEO PLAYER
+       ========================================================================== -->
+  <div class="lightbox-modal" id="videoLightboxModal" role="dialog" aria-modal="true" aria-label="Video Player Lightbox">
+    <div class="lightbox-content">
+      <!-- Modal Header -->
+      <div class="lightbox-header">
+        <div class="lightbox-title-box">
+          <span class="lightbox-category" id="lightboxCategory">Featured Video</span>
+          <h3 class="lightbox-title" id="lightboxTitle">Project Title</h3>
+        </div>
+        <button class="lightbox-close-btn" id="lightboxCloseBtn" title="Close (Esc)" aria-label="Close Lightbox">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Player Frame -->
+      <div class="lightbox-player-wrapper">
+        <video class="lightbox-video" id="lightboxVideo" playsinline preload="auto">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+
+      <!-- Custom Sleek Controls Bar -->
+      <div class="custom-controls-bar">
+        <!-- Play / Pause -->
+        <button class="control-btn" id="modalPlayBtn" title="Play / Pause (Space)" aria-label="Play or Pause">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </button>
+
+        <!-- Time readout -->
+        <span class="time-readout" id="modalTimeCurrent">0:00</span>
+
+        <!-- Scrubber Bar -->
+        <div class="scrubber-track" id="modalScrubberTrack">
+          <div class="scrubber-fill" id="modalScrubberFill"></div>
+        </div>
+
+        <span class="time-readout" id="modalTimeDuration">0:00</span>
+
+        <!-- Mute / Unmute -->
+        <button class="control-btn" id="modalMuteBtn" title="Mute / Unmute" aria-label="Toggle Audio">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <!-- Fullscreen -->
+        <button class="control-btn" id="modalFullscreenBtn" title="Fullscreen" aria-label="Enter Fullscreen">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Case Study — Irfan Video Editor</title>
+  <meta name="description" content="In-depth post-production breakdown, pacing strategies, color grading, and retention metrics.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .project-header-section {
+      padding-top: 8rem;
+      padding-bottom: 3rem;
+      position: relative;
+    }
+    .back-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      transition: all var(--transition-fast);
+      padding: 0.5rem 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+    }
+    .back-nav-link:hover {
+      color: #fff;
+      border-color: var(--accent-blue);
+      transform: translateX(-4px);
+    }
+    .project-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+      padding: 1.75rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .meta-item-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+    }
+    .meta-item-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .project-video-container {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 102, 255, 0.2);
+      margin-bottom: 4rem;
+      position: relative;
+    }
+    .project-video-player {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
+    }
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+    @media (min-width: 992px) {
+      .case-study-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+    .case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .case-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .case-card p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      font-size: 0.98rem;
+    }
+    .project-nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .project-tab-btn {
+      padding: 0.65rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+    .project-tab-btn:hover,
+    .project-tab-btn.active {
+      background: rgba(0, 102, 255, 0.15);
+      border-color: var(--accent-blue);
+      color: var(--accent-cyan);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="mouse-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="index.html#hero" class="brand-logo">
+        <div class="brand-mark"><span>I</span></div>
+        <div class="brand-info">
+          <span class="brand-name">IRFAN</span>
+          <span class="brand-status"><span class="status-dot"></span> SENIOR VIDEO EDITOR</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn btn-primary magnetic-btn">
+          <span>Hire Me</span>
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-header-section">
+      <div class="container">
+        <!-- Back Link -->
+        <a href="index.html#long-form" class="back-nav-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to All Work</span>
+        </a>
+
+        <!-- Project Switcher Tabs -->
+        <div class="project-nav-tabs">
+          <a href="project.html?id=saas-animation" class="project-tab-btn" id="tab-saas-animation">1. SaaS Animation</a>
+          <a href="project.html?id=before-after" class="project-tab-btn" id="tab-before-after">2. Before &amp; After Polish</a>
+          <a href="project.html?id=educational-youtube" class="project-tab-btn" id="tab-educational-youtube">3. Educational YouTube</a>
+          <a href="project.html?id=talking-head" class="project-tab-btn" id="tab-talking-head">4. Talking Head Edit</a>
+          <a href="project.html?id=motion-graphics" class="project-tab-btn" id="tab-motion-graphics">5. Motion Graphics &amp; 3D</a>
+        </div>
+
+        <div class="section-badge" id="projBadge">
+          <span class="badge-dot"></span>
+          <span id="projBadgeText">SaaS &amp; Tech Animation</span>
+        </div>
+
+        <h1 class="section-title" id="projTitle">SaaS Animation Edit</h1>
+        <p class="section-subtitle" id="projSubtitle">
+          Kinetic product walkthrough engineered to illustrate high-tech value propositions with 0% viewer confusion.
+        </p>
+
+        <!-- Meta Grid -->
+        <div class="project-meta-grid">
+          <div>
+            <div class="meta-item-label">Client / Focus</div>
+            <div class="meta-item-value" id="projClient">AI Tech Platform</div>
+          </div>
+          <div>
+            <div class="meta-item-label">Role</div>
+            <div class="meta-item-value">Motion Direction &amp; Audio</div>
+          </div>
+          <div>
+            <div class="meta-item-label">Software Stack</div>
+            <div class="meta-item-value" id="projTools">Premiere, After Effects</div>
+          </div>
+          <div>
+            <div class="meta-item-label">Duration &amp; Reach</div>
+            <div class="meta-item-value" id="projDuration">0:14 · 450K Views</div>
+          </div>
+        </div>
+
+        <!-- Video Player -->
+        <div class="project-video-container">
+          <video class="project-video-player" id="mainProjectVideo" controls playsinline preload="metadata">
+            <source src="videos/chatgpt-saas.mp4" type="video/mp4" id="projVideoSrc">
+          </video>
+        </div>
+
+        <!-- Before / After Slider Section (Dynamically displayed when relevant) -->
+        <div id="beforeAfterSection" style="display: none; margin-bottom: 4rem;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">
+            Interactive Grade Comparison (Drag the Slider)
+          </h3>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Slide horizontally to compare RAW camera capture against Irfan's film-emulation DaVinci Resolve color grade and lighting balance.
+          </p>
+          <div class="before-after-container" id="baSliderContainer">
+            <div class="ba-image-before">
+              <img src="posters/before-after-sample1.jpg" alt="Raw Log Footage">
+            </div>
+            <div class="ba-image-after" id="baAfterWrap">
+              <img src="posters/before-after-sample2.jpg" alt="Final Color Graded">
+            </div>
+            <div class="ba-slider-handle" id="baHandle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Dive Breakdown -->
+        <div class="case-study-grid">
+          <div>
+            <div class="case-card">
+              <h3>The Creative Challenge</h3>
+              <p id="projChallenge">
+                The client needed to translate complex SaaS capabilities into snappy, immediately understandable visuals without bogging the viewer down in dry UI recordings.
+              </p>
+              <h3>The Editing Strategy</h3>
+              <p id="projStrategy">
+                We rebuilt core UI widgets into vector assets inside After Effects, added custom kinetic cursor paths, dynamic optical zooms, and a rich multi-layer foley soundtrack featuring mechanical keystrokes, subtle air risers, and sub-bass impacts.
+              </p>
+            </div>
+
+            <div class="case-card">
+              <h3>Technical Execution</h3>
+              <p id="projExecution">
+                Utilized Adobe Premiere Pro for master timeline pacing, After Effects for 2.5D camera choreographies, and DaVinci Resolve for custom neon electric-blue highlights.
+              </p>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                <span class="pill-tag">Adobe Premiere Pro</span>
+                <span class="pill-tag">Adobe After Effects</span>
+                <span class="pill-tag">DaVinci Resolve Studio</span>
+                <span class="pill-tag">Adobe Audition</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Results & CTA -->
+          <div>
+            <div class="case-card" style="background: linear-gradient(180deg, rgba(14, 14, 20, 0.9) 0%, rgba(10, 10, 15, 0.95) 100%); border-color: rgba(0, 102, 255, 0.3);">
+              <div class="section-badge" style="margin-bottom: 1rem;">
+                <span class="badge-dot"></span>
+                Key Results
+              </div>
+              <h3 style="font-size: 2rem; color: #fff; margin-bottom: 0.5rem;" id="projMetricHeadline">+84% Conversion</h3>
+              <p id="projMetricDesc">Significant boost in viewer engagement and direct software signups generated within the first 14 days of campaign release.</p>
+
+              <hr style="border: none; border-top: 1px solid var(--border-subtle); margin: 2rem 0;">
+
+              <h4 style="color: #fff; margin-bottom: 0.5rem;">Ready to level up your video content?</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Irfan takes on select high-end channels, startups, and creators each month.
+              </p>
+
+              <a href="index.html#contact" class="btn btn-primary" style="width: 100%;">
+                <span>Start Your Project</span>
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Irfan Ahmed B. All Rights Reserved.</div>
+      <a href="index.html" class="footer-link">Return to Home</a>
+    </div>
+  </footer>
+
+  <script src="js/audio.js"></script>
+  <script>
+    const projectsData = {
+      'saas-animation': {
+        title: 'SaaS Animation Edit',
+        badge: 'SaaS & Tech Animation',
+        subtitle: 'Kinetic product walkthrough engineered to illustrate high-tech value propositions with 0% viewer confusion.',
+        client: 'AI Tech Platform',
+        tools: 'Premiere, After Effects, DaVinci',
+        duration: '0:14 · 450K Views',
+        video: 'videos/chatgpt-saas.mp4',
+        poster: 'posters/chatgpt-saas.jpg',
+        challenge: 'The client needed to translate complex SaaS capabilities into snappy, immediately understandable visuals without bogging the viewer down in dry UI recordings.',
+        strategy: 'We rebuilt core UI widgets into vector assets inside After Effects, added custom kinetic cursor paths, dynamic optical zooms, and a rich multi-layer foley soundtrack featuring mechanical keystrokes, subtle air risers, and sub-bass impacts.',
+        execution: 'Utilized Adobe Premiere Pro for timeline pacing, After Effects for 2.5D camera choreographies, and DaVinci Resolve for custom neon electric-blue highlights.',
+        metricHeadline: '+84% Signup Lift',
+        metricDesc: 'Significant boost in viewer engagement and direct software signups generated within the first 14 days of campaign release.',
+        hasBA: false
+      },
+      'before-after': {
+        title: 'Before & After Transformation',
+        badge: 'Color Grade & Audio Polish',
+        subtitle: 'Side-by-side overhaul: skin-tone color grading, dynamic background compression, custom light leaks, and room tone cleanup.',
+        client: 'Creator High-Production Studio',
+        tools: 'DaVinci Resolve Studio, Premiere Pro',
+        duration: '0:27 · 820K Views',
+        video: 'videos/before-after-tharun.mp4',
+        poster: 'posters/before-after-tharun.jpg',
+        challenge: 'Raw footage had flat lighting, mixed color temperature casts, and background noise that pulled focus away from the speaker.',
+        strategy: 'Executed an aggressive DaVinci Resolve node tree: isolated skin tones with qualifiers, warmed highlights while neutralizing shadows, added subtle vignette masks, and mastered audio using spectral de-noising.',
+        execution: 'Custom 3D LUT creation, multi-band audio limiting, and dynamic punch-ins on key takeaway sentences.',
+        metricHeadline: '94% Retention Through 0:25',
+        metricDesc: 'Viewers stayed locked into the clip due to visual warmth, high contrast, and pristine dialogue clarity.',
+        hasBA: true
+      },
+      'educational-youtube': {
+        title: 'Educational YouTube Video',
+        badge: 'High-Retention Educational',
+        subtitle: 'Masterclass-level educational pacing: conceptual diagrams, pattern interrupts every 4.5 seconds, and immersive ambient risers.',
+        client: 'Tech & Career Creator',
+        tools: 'Premiere Pro, After Effects, Audition',
+        duration: '0:27 · 1.4M Views',
+        video: 'videos/tharun-talking-head.mp4',
+        poster: 'posters/tharun-talking-head.jpg',
+        challenge: 'Educational videos often suffer huge viewer drop-offs around the 1-minute and 3-minute marks if the visual pacing stays monotonous.',
+        strategy: 'Engineered an aggressive hook with visual text popups, synchronized sound hits, dynamic zooms (110% punch-ins), and b-roll inserts every 3-5 seconds to reset audience attention spans.',
+        execution: 'Pacing mapped against YouTube analytics retention drop curves to ensure maximum algorithmic push.',
+        metricHeadline: '1.4M+ Organic Views',
+        metricDesc: 'Reached #2 on trending tech topics with over 68,000 watch hours logged.',
+        hasBA: false
+      },
+      'talking-head': {
+        title: 'Talking Head Video Production',
+        badge: 'Executive Brand & Leadership',
+        subtitle: 'Founder thought-leadership edit with multi-angle simulated cut-ins, crisp dialogue de-reverberation, and clean b-roll transitions.',
+        client: 'Founder & Venture Capitalist',
+        tools: 'Premiere Pro, DaVinci Resolve, Audition',
+        duration: '0:56 · 680K Views',
+        video: 'videos/assignment-3.mp4',
+        poster: 'posters/assignment-3.jpg',
+        challenge: 'Raw single-camera footage felt static, making the message feel dry and uninspired.',
+        strategy: 'Simulated a high-budget 2-camera setup using 4K punch-ins and reframing. Layered relevant b-roll, animated lower-third titles, and orchestral background music that builds with the speaker’s emotional tempo.',
+        execution: 'Zero vocal clicks, eliminated all awkward breathing pauses, and tuned loudness to -14 LUFS for YouTube standards.',
+        metricHeadline: '4.8x Higher Shares',
+        metricDesc: 'Drove massive engagement across LinkedIn and YouTube with high completion rates.',
+        hasBA: false
+      },
+      'motion-graphics': {
+        title: 'Motion Graphics & 3D Typography',
+        badge: 'Kinetic Typography & 3D Motion',
+        subtitle: 'High-octane commercial titles, custom optical flares, 3D camera sweeps, and bass-heavy sound design tailored for launch campaigns.',
+        client: 'Brand Agency & Commercial Launch',
+        tools: 'After Effects, Cinema 4D, Premiere Pro',
+        duration: '0:13 · 2.1M Views',
+        video: 'videos/hero-section.mp4',
+        poster: 'posters/hero-poster.jpg',
+        challenge: 'Capture instant consumer desire in under 15 seconds for a premium brand release.',
+        strategy: 'High-precision keyframe acceleration, 3D depth passes, chromatic aberration accents, and synchronizing typography tracking to audio drum transients.',
+        execution: 'GPU-accelerated rendering, 60fps motion blur, and Dolby-calibrated stereo sound effects.',
+        metricHeadline: '2.1M+ Impressions',
+        metricDesc: 'Featured across paid social campaigns generating top-tier ROAS for the client.',
+        hasBA: false
+      }
+    };
+
+    // Parse URL param
+    const params = new URLSearchParams(window.location.search);
+    const activeId = params.get('id') || 'saas-animation';
+    const data = projectsData[activeId] || projectsData['saas-animation'];
+
+    // Update Tab active state
+    document.querySelectorAll('.project-tab-btn').forEach(tab => {
+      if (tab.id === `tab-${activeId}`) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
+
+    // Populate Data
+    document.getElementById('projTitle').textContent = data.title;
+    document.getElementById('projBadgeText').textContent = data.badge;
+    document.getElementById('projSubtitle').textContent = data.subtitle;
+    document.getElementById('projClient').textContent = data.client;
+    document.getElementById('projTools').textContent = data.tools;
+    document.getElementById('projDuration').textContent = data.duration;
+    document.getElementById('projChallenge').textContent = data.challenge;
+    document.getElementById('projStrategy').textContent = data.strategy;
+    document.getElementById('projExecution').textContent = data.execution;
+    document.getElementById('projMetricHeadline').textContent = data.metricHeadline;
+    document.getElementById('projMetricDesc').textContent = data.metricDesc;
+
+    const vid = document.getElementById('mainProjectVideo');
+    vid.src = data.video;
+    vid.poster = data.poster;
+
+    if (data.hasBA) {
+      document.getElementById('beforeAfterSection').style.display = 'block';
+      initBASlider();
+    }
+
+    function initBASlider() {
+      const container = document.getElementById('baSliderContainer');
+      const afterWrap = document.getElementById('baAfterWrap');
+      const handle = document.getElementById('baHandle');
+      if (!container || !afterWrap || !handle) return;
+
+      let isDragging = false;
+      function updateSlider(x) {
+        const rect = container.getBoundingClientRect();
+        let posX = x - rect.left;
+        if (posX < 0) posX = 0;
+        if (posX > rect.width) posX = rect.width;
+        const percentage = (posX / rect.width) * 100;
+        afterWrap.style.width = `${percentage}%`;
+        handle.style.left = `${percentage}%`;
+      }
+      container.addEventListener('mousedown', e => { isDragging = true; updateSlider(e.clientX); });
+      window.addEventListener('mouseup', () => isDragging = false);
+      window.addEventListener('mousemove', e => { if (isDragging) updateSlider(e.clientX); });
+      container.addEventListener('touchstart', e => { isDragging = true; updateSlider(e.touches[0].clientX); }, { passive: true });
+      window.addEventListener('touchend', () => isDragging = false);
+      window.addEventListener('touchmove', e => { if (isDragging) updateSlider(e.touches[0].clientX); }, { passive: true });
+    }
+  </script>
+</body>
+</html>
